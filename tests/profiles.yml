@@ -1,0 +1,13 @@
+default:  # This should match the profile name in your dbt_project.yml
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: abcd-xy123.ap-southeast-1     # Replace with your Snowflake account name
+      user: ATHAMAWA                    # Replace with your actual Snowflake username
+      password: Ameerababy@123              # Replace with your password
+      role: your_role                        # Optional (skip if not needed)
+      warehouse: COMPUTE_WH                  # Replace with an actual running warehouse
+      database: DBT_PROJECT_DB               # Replace with your database name
+      schema: RAW_SCHEMA                     # Replace with your schema
+      threads: 4
